@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Dosis:wght@200;300&family=Jost:wght@200;300&family=Montserrat:wght@100;200;300;400&family=Quicksand:wght@300;400&family=Ysabeau:wght@1;100;200;300;400;500;600&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#373737;
+  color: white;
+  padding: 10px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: transform 0.3s ease;
+ 
+}
+
+.hamburger:before {
+  top: 0;
+}
+
+.hamburger:after {
+  bottom: 0;
+  
+}
+
+.navigation-names {
+  display: flex;
+  margin-right: 12%;
+
+}
+
+.navigation-names a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+.navigation-bar button{
+  width: 10%;
+ padding: 1%;
+margin-right: 5%;
+background-color: #fee24a;
+border: none;
+}
+.navigation-bar i{
+  font-size: 2em;
+  margin-left: 5%;
+}
+.gadget span{
+color: #ffe24b;
+}
+.gadget{
+  margin-left: 11%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navigation-names {
+    display: none;
+  }
+  .gadget{
+    padding-left: 5%;
+  }
+
+  .hamburger {
+    display: block;
+    /* padding-right: -5%; */
+    padding-left: -16%;
+    margin-right: 5%;
+  
+  }
+
+  #toggle-menu {
+    display: none;
+  }
+
+  #toggle-menu:checked ~ .navigation-names {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+   
+  }
+  .navigation-bar{
+    /* width: 55%;
+    height: ; */
+    padding-bottom: 5%;
+   
+    padding-left: -10px;
+  }
+
+
+}
+/* ................................search engine........................ */
+
+.search-engines{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   padding-top: 3%;
+   color: #373737;
+}
+@media screen and (max-width:700px){
+    .search-engines{
+        display: block;
+        grid-template-columns: repeat(2,2fr);
+        padding-left: 50%;
+    }
+    
+    
+  }
+ .search{
+     margin-left: -35%;
+     border: solid 1px rgb(222, 220, 220);
+     width: 60%;
+}
+@media screen and (max-width:700px){
+    .search{
+        margin-left: -90%;
+     margin-top: 5%;
+    }
+}
+.category{
+     margin-left: 23%;
+     border: solid 1px rgb(222, 220, 220);
+     width: 40%;  
+} 
+@media screen and (max-width:700px){
+    .category{
+    margin-left: -90%;
+    }
+}
+
+.search-engines i{
+font-size: 1.5em;
+
+}
+
+
+/* ....................Another gadgets part.......................... */
+
+
+
+.another-gadgets{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+     padding: 40px; 
+    background-image: linear-gradient(120deg, #B5CDFB 0%, #DCBFDE 100%);
+     margin: 7%;  
+     margin-bottom:9%;
+     color: #373737;
+
+}
+@media screen and (max-width:700px){
+.another-gadgets{
+    display: block;
+    grid-template-columns: repeat(2,2fr);
+    /* padding: 20px; */
+}
+}
+.word-gadgets{
+
+margin-left: 20%;
+}
+.word-gadgets h1{
+    font-size: 3em;
+}
+@media screen and (max-width:700px){
+    .word-gadgets h1{
+font-size: 2em;
+    }
+}
+.button-gadgets{
+    padding-left: 14%;
+    padding-bottom: 9%;
+}
+
+.button-gadgets  button{
+    margin-left: 7%;
+   height: 250%; 
+  width: 25%;
+  background-color: #ffe24b;
+  border: none;
+}
+
+.button-gadgets  span button{
+    background-color: #c8c6ed;
+    margin-left: 2%;
+   height: 250%; 
+  width: 25%;
+    color: white; 
+   
+    border: 1px solid;
+}
+
+
+
+
+/* ....................................card box................... */
+
+
+
+.card-box{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 7%;
+    color: #373737;
+    
+ 
+}
+@media screen and (max-width:700px){
+  .card-box{
+    display: block;
+    grid-template-columns: repeat(6,6fr);
+
+   
+  }
+
+}
+.card-one{
+ border: 0.5px solid;
+ margin-left: 5%;
+ padding-left: 27%;
+ /* box-shadow: 0 2px 12px 4px #3434343d;  */
+ height: 100%;
+ 
+}
+@media screen and (max-width:700px){
+   .card-one{
+    
+    width: 20%;
+    text-align: center;
+   }
+   .card-two{
+    width: 20%;
+   }
+   .card-three{
+    width: 20%;
+   }
+   .card-four{
+    width: 20%;
+   }
+   .card-five{
+    width: 20%;
+   }
+   .card-six{
+    width: 20%;
+    margin-bottom: 20%;
+   }
+}
+.card-two{
+    border:0.01px solid;
+    color: black;
+    margin-left: 5%;
+    padding-left: 27%;
+    /* box-shadow: 0 2px 12px 4px #3434343d;  */
+    height: 100%;
+   }
+
+
+.card-three{
+    border: 0.5px solid;
+    margin-left: 5%;
+    padding-left: 27%;
+    /* box-shadow: 0 2px 12px 4px #3434343d;  */
+    height: 100%;
+   }
+.card-four{
+    border: 0.5px solid;
+    margin-left: 5%;
+    padding-left: 27%;
+    /* box-shadow: 0 2px 12px 4px #3434343d;  */
+    height: 100%;
+   }
+   .card-five{
+    border: 0.5px solid;
+    margin-left: 5%;
+    padding-left: 27%;
+
+    /* box-shadow: 0 2px 12px 4px #3434343d;  */
+    height: 100%;
+    background-color: black;
+    color: white;
+   }
+   .card-six{
+    border: 0.5px solid;
+    margin-left: 5%;
+    padding-left: 27%;
+  
+    /* box-shadow: 0 2px 12px 4px #3434343d;  */
+    height: 100%;
+   }
+   @media screen and (max-width:700px){
+    .card-six{
+        margin-bottom: 30%;
+    }
+ }
+   /* .........................END OF CARDS................................ */
+
+
+
+
+/* ---------------------------------START OF CARD API------------------------------------ */
+
+#products{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    margin: 5%;
+ 
+   
+}
+@media screen and (max-width:700px){
+  #product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5%;
+
+  }
+  #products > div {
+    flex: 1; /* Each div takes an equal fraction of space */
+  }
+  
+  #products > div:nth-child(3) {
+    flex: 2; /* The third div takes twice the space of other divs */
+  }
+}
+.music{
+   
+    margin-bottom: 3%;
+    border-radius: 5px;
+    width: 23%;
+    text-align: center;
+    box-shadow: 0 2px 12px 4px #3434343d;  
+}
+@media screen and (max-width:700px){
+    .category{
+    margin-left: -90%;
+    }
+}
+.music img{
+    width: 16em;
+}
+@media screen and (max-width:700px){
+ .music img{
+    width: 8.5em;
+ }
+ .music p{
+    font-size: 1em;
+ }
+ .music h1{
+  
+}
+}
+
+
+
+
+
+
+
+/* ------------------------END OF CARD API--------------------------------------------------- */
+
+
+
+
+   /* ------------------------------------START WITH CAMERAS------------------------------ */
+
+.camera{
+    background-image: url(/images/image2.jpg);
+    background-repeat: no-repeat;
+
+   background-size: cover;
+   background-position: auto;
+  width: 90%;
+  
+}
+
+
+.camera h1{
+    margin-top: 14%;
+    margin-bottom: 14%;
+    padding-left: 20%;
+    font-size: 4em;
+    color: white;
+
+
+}
+.devices{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 5%;
+    margin: 6%;
+}
+@media screen and (max-width:700px){
+.devices{
+  display: block;
+  grid-template-columns: repeat(2,2fr);
+  /* margin: 10%; */
+}
+ }
+.head-phone{
+  background-image: url(/images/imag4.png);
+  background-repeat: no-repeat;
+
+ background-size: cover;
+ background-position: auto;
+width: 90%;
+}
+@media screen and (max-width:700px){
+  .head-phone h1{
+  font-size: 1em;
+  }
+     }
+.head-phone h1{
+color: white;
+margin-top: 14%;
+margin-bottom: 14%;
+padding-left: 20%;
+font-size: 4em;
+}
+@media screen and (max-width:700px){
+.head-phone h1{
+font-size: 1em;
+}
+   }
+/* ----------------------------------END OF CAMERAS--------------------- */
+
+
+
+
+   /* ......................START controller............... */
+
+
+.controller{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* padding-top: 2%; */
+    /* padding-bottom: 7%; */
+    background-color: #c8c6ed;background-image: linear-gradient(120deg, #B5CDFB 0%, #DCBFDE 100%); margin-top: 7%;
+    margin: 6%;
+    color: #373737;
+   
+}
+@media screen and (max-width:700px){
+  .controller{
+    display: block;
+    grid-template-columns: repeat(2,2fr);
+ width: 72%;
+  }
+ 
+     }
+.controller-word{
+    padding-left: 30%;
+    padding-top: 7%;
+  
+}
+@media screen and (max-width:700px){
+  .controller-word {
+padding: 5% 15% 0 10%;
+
+
+ 
+  }
+ 
+     }
+.controller-word h1{
+    font-size: 240%;
+}
+@media screen and (max-width:700px){
+  .controller-word h1{
+ font-size:1em ;
+ 
+  }
+ 
+     }
+.controller-word span{
+ color: #eed77f;
+}
+
+@media screen and (max-width:700px){
+  .controller-phone img{
+ width: 50%;
+ 
+  }
+ 
+     }
+/* ---------------------END OF CONTROLLER------------------------------- */
+
+
+/* .......................testimonials........... */
+
+.sub-testimonials{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 5%;
+}
+@media screen and (max-width:700px){
+.sub-testimonials{
+  display: block;
+  grid-template-columns: repeat(2,2fr);
+}
+ 
+     }
+.testimonials{
+    color: #373737;
+}
+
+
+.testimonials h1{
+    text-align: center;
+    font-size: 3em;
+   
+}
+.testimonials p{
+    text-align: center;
+   
+}
+.testimonial-image{
+    background-color: #e6e6e6;
+    width: 39%;
+    height: 96%;
+}
+
+
+/* ------------------------------------END OF TESTIMONIALS---------------------------- */
+
+
+/* ----------------------------------------START OF LINE-------------------------------------- */
+
+hr {
+    border: none; 
+    border-top: 1px solid #000;
+    margin: 20px 0;
+padding-left: 20%;
+        height: 112%;
+        width: 22%;
+  }
+
+/* ----------------------------------------------SUBSRIBE STARTS----------------------------------------- */
+
+  .subscribe{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    color: #373737;
+  }
+  @media screen and (max-width:700px){
+  .subscribe{
+    display: block;
+    grid-template-columns: repeat();
+  }
+ }
+  .subscribe-email button{
+   padding: 15%;
+   width: 300%;
+   background-color: #fee24a;
+   border: none;
+   /* height: 20%; */
+  
+  }
+  @media screen and (max-width:700px){
+  .subscribe-email button{
+    width: 40%;
+padding: 2%;
+  }
+   }
+  .subscribe-email{
+padding-top: 1%;
+margin-left: -5%;
+
+  }
+  .call{
+    margin-left: 7%;
+  }
+
+  /* .........................footer............. */
+
+  .store-footer{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    /* padding-top: 5%; */
+    background-color: #373737;
+    color: white;
+    margin-top: 5%;
+   padding:3% 0 3% 0 ;
+  }
+  
+  @media screen and (max-width:700px){
+   .store-footer{
+    display: block;
+    grid-template-columns: repeat(5,5fr);
+ 
+   }
+   }
+
+  .store-footer h1 span{
+    color:#fee24a;
+  }
+ 
+  @media screen and (max-width:700px){
+    .card-footer{
+        margin:7%;
+        font-size: 12px;
+      }
+    }
